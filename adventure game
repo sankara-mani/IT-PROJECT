@@ -1,0 +1,25 @@
+ import java.util.Scanner;
+    public class MyClass {
+        public static void main(String args[]) {
+                
+            Scanner sc = new Scanner(System.in);
+            System.out.print("Enter any character to start and x to stop: " );
+            String userInput = sc.nextLine().toLowerCase();
+
+            while(!userInput.equals("x")){
+                System.out.print("Enter a word: " );
+                String name = sc.nextLine();
+
+                if(name.length() < 5){
+                    System.out.println("That word is so short! " );
+                }else{
+                    System.out.println("That is too wordy! " );
+                }
+
+                System.out.print("Enter any character to start and x to stop: " );
+                userInput = sc.nextLine().toLowerCase();
+            }
+
+            System.out.print("Done!" );
+        }
+    }
